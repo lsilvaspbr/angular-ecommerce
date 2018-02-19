@@ -1,0 +1,43 @@
+.my-account-header {    
+    background-color: #eceeef;  
+    width: 100%; 
+    color: #fff;
+    height: 80px;
+    padding-top: 20px;
+    padding-left: 18px;    
+}
+
+.my-account-header h2 {
+    font-weight: lighter;
+    font-size: 1.6em;
+    color: #292b2c;
+}
+
+/* Card */
+.card:hover {
+    background-color: #eceeef;
+}
+
+.card-custom {
+    display: block; 
+    float: left;        
+    margin-left: 10px;
+    line-height: 15px;
+}
+
+.card-custom h3 {    
+    font-weight: 440;    
+    font-size: 20px;
+    color: #111;  
+}
+
+.card-custom p {
+    font-weight: lighter;    
+    margin: 0;              
+    color: #555;  
+}
+
+.svg-inline--fa {
+    width: 51px !important;
+    margin-left: 0;
+}
