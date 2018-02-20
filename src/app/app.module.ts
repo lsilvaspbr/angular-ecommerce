@@ -8,6 +8,7 @@ import { AddressListComponent } from './my-account/address-list/address-list.com
 import { OrderHistoryComponent } from './my-account/order-history/order-history.component';
 import { WishlistComponent } from './my-account/wishlist/wishlist.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
     MyAccountComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
