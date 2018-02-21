@@ -1,2 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container-margin-top1 {
+    margin-top: 20px;
+}
+
+.container-margin-top2 {
+    margin-top: 40px;
+}
+
+.container-margin-bottom1 {
+    margin-bottom: 20px;
+}
+
+.container-margin-bottom2 {
+    margin-bottom: 40px;
+}
+
+a.btn-back { 
+    display: inline-block;
+    padding-top: 10px;    
+}
+
+.btn {        
+    width: 80px;
+    float: right;
+    margin-left: 20px;
+}

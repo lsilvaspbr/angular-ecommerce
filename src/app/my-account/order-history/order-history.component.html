@@ -1,3 +1,25 @@
-<p>
-  order-history works!
-</p>
+<nav class="breadcrumb" style="margin: 0; background-color: #fff;">
+	<a class="breadcrumb-item" routerLink="/">Home</a>
+	<a class="breadcrumb-item" routerLink="/">My Account</a>
+	<span class="breadcrumb-item active">Order History</span>
+</nav>
+
+<div class="container container-margin-top1">
+	<div class="form-group col-5">
+		<h2>Order History</h2>
+		<p>Track your orders and change the payment method.</p>
+	</div>
+</div>
+
+<div class="container container-margin-top2 container-margin-bottom2" *ngFor="let order of orderList; let last = last">
+	<div class="media">
+		<img class="d-flex align-self-center mr-3" [src]="order.image" alt="Generic placeholder image" style="width: 100px; height: 100px;">
+		<div class="media-body">
+			<h5 class="mt-0">{{order.name}}</h5>
+			<p>{{order.description}}</p>
+			<p>purchase date: {{order.date}}</p>
+		</div>
+	</div>
+	<hr>
+	<a routerLink="/" class="btn-back" *ngIf="last">Back</a>
+</div>
