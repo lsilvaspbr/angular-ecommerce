@@ -1,3 +1,28 @@
-<p>
-  wishlist works!
-</p>
+<nav class="breadcrumb" style="margin: 0; background-color: #fff;">
+	<a class="breadcrumb-item" routerLink="/">Home</a>
+	<a class="breadcrumb-item" routerLink="/">My Account</a>
+	<span class="breadcrumb-item active">Wish List</span>
+</nav>
+
+<div class="container">
+	<div class="container-margin-top1">
+		<div class="form-group col-5">
+			<h2>Wish List</h2>
+			<p>Products you are interested in.</p>
+		</div>
+	</div>
+
+	<div class="container-margin-top2" *ngFor="let product of wishList; let last = last">
+		<div class="media">
+			<img class="d-flex align-self-center mr-3" [src]="product.image" alt="Generic placeholder image" style="width: 100px; height: 100px;">
+			<div class="media-body">
+				<h5 class="mt-0">{{product.name}}</h5>
+				<p>{{product.description}}</p>
+				<p>Item added {{product.date}}</p>
+			</div>
+		</div>
+		<hr>
+		<a routerLink="/" class="btn-back" *ngIf="last">Back</a>
+	</div>
+</div>
+

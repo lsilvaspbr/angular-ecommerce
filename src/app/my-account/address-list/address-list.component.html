@@ -1,3 +1,57 @@
-<p>
-  address-list works!
-</p>
+<nav class="breadcrumb" style="margin: 0; background-color: #fff;">
+	<a class="breadcrumb-item" routerLink="/">Home</a>
+	<a class="breadcrumb-item" routerLink="/">My Account</a>
+	<span class="breadcrumb-item active">Address List</span>
+</nav>
+
+<div class="container">
+	<div class="container-margin-top1">
+		<div class="form-group col-5">
+			<h2>Your Addresses</h2>
+			<p>Edit addresses for orders.</p>
+		</div>
+	</div>
+
+	<!-- <div class="container container-margin-top2 container-margin-bottom2" *ngFor="let order of orderList; let last = last"> -->
+	<div class="container-margin-top2">
+		<div class="card-deck">
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-header">
+						Default Address
+					</div>
+					<div class="card-block">
+						<h4 class="card-title">John Wick</h4>
+						<p class="card-text">Street, 248</p>
+						<p class="card-text">Bloco 4 - AP 15</p>
+						<p class="card-text">Sao Paulo, SP 05344-030</p>
+						<p class="card-text">Brasil</p>
+						<p class="card-text">Phone: +55 11 982818927</p>
+						<button type="button" class="btn btn-default">Edit</button>
+						<button type="submit" class="btn btn-default">Delete</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card">
+					<div class="card-header">
+						Default Address
+					</div>
+					<div class="card-block">
+						<h4 class="card-title">Lucas Silva</h4>
+						<p class="card-text">Rua Jaguare, 186</p>
+						<p class="card-text">Bloco 4 - AP 151</p>
+						<p class="card-text">Sao Paulo, SP 05344-030</p>
+						<p class="card-text">Brasil</p>
+						<p class="card-text">Phone: +55 11 982818927</p>
+						<button type="button" class="btn btn-default">Edit</button>
+						<button type="submit" class="btn btn-default">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<!-- <a routerLink="/" class="btn-back" *ngIf="last">Back</a> -->
+		<a routerLink="/" class="btn-back">Back</a>
+	</div>
+</div>

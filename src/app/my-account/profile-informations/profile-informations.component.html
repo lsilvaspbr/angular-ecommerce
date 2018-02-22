@@ -4,31 +4,36 @@
 	<span class="breadcrumb-item active">Profile Informations</span>
 </nav>
 
-<div class="container container-margin-top">	
-	<div class="form-group col-4">
-		<h2>Profile Informations</h2>
-		<p>Change your personal informations</p>
+<div class="container">
+	<div class="container-margin-top1">
+		<div class="form-group col-4">
+			<h2>Profile Informations</h2>
+			<p>Change your personal informations</p>
+		</div>
 	</div>
-	<form>
-		<div class="form-group col-4">
-			<label for="">Name: </label>
-			<input type="text" class="form-control" ngModel name="name">
-		</div>
-		<div class="form-group col-4">
-			<label for="email">E-mail: </label>
-			<div class="input-group">
-				<div class="input-group-addon">@</div>
-				<input type="email" name="email" id="email" class="form-control" required>
+
+	<div class="container-margin-top2">
+		<form>
+			<div class="form-group col-4">
+				<label for="">Name: </label>
+				<input type="text" class="form-control" ngModel name="name">
 			</div>
-		</div>
-		<div class="form-group col-4">
-			<label for="">Phone: </label>
-			<input type="text" class="form-control" ngModel name="phone">
-		</div>
-		<div class="col-4">
-			<a routerLink="/" class="btn-back">Back</a>
-			<button type="button" class="btn btn-default">Done</button>
-			<button type="submit" class="btn btn-default">Edit</button>
-		</div>
-	</form>
+			<div class="form-group col-4">
+				<label for="email">E-mail: </label>
+				<div class="input-group">
+					<div class="input-group-addon">@</div>
+					<input type="email" name="email" id="email" class="form-control" required>
+				</div>
+			</div>
+			<div class="form-group col-4">
+				<label for="">Phone: </label>
+				<input type="text" class="form-control" ngModel name="phone">
+			</div>			
+			<div class="col-4">
+				<a routerLink="/" class="btn-back">Back</a>
+				<button type="button" class="btn btn-default">Done</button>
+				<button type="submit" class="btn btn-default">Edit</button>
+			</div>
+		</form>
+	</div>
 </div>
