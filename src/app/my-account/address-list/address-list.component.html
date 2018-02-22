@@ -12,46 +12,33 @@
 		</div>
 	</div>
 
-	<!-- <div class="container container-margin-top2 container-margin-bottom2" *ngFor="let order of orderList; let last = last"> -->
-	<div class="container-margin-top2">
-		<div class="card-deck">
+	<div class="container container-margin-top2">
+		<div class="card-deck" *ngFor="let address of addressList | async; let i = index; let last = last">
 			<div class="col-sm-4">
 				<div class="card">
-					<div class="card-header">
+					<div class="card-header color-green">
 						Default Address
 					</div>
 					<div class="card-block">
-						<h4 class="card-title">John Wick</h4>
-						<p class="card-text">Street, 248</p>
-						<p class="card-text">Bloco 4 - AP 15</p>
-						<p class="card-text">Sao Paulo, SP 05344-030</p>
-						<p class="card-text">Brasil</p>
-						<p class="card-text">Phone: +55 11 982818927</p>
+						<h4 class="card-title">{{address.name}}</h4>
+						<p class="card-text">{{address.location}}</p>
+						<p class="card-text">{{address.apartNumber}}</p>
+						<p class="card-text">{{address.city}}</p>
+						<p class="card-text">{{address.country}}</p>
+						<p class="card-text">Phone:{{address.phone}}</p>
 						<button type="button" class="btn btn-default">Edit</button>
 						<button type="submit" class="btn btn-default">Delete</button>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4">
-				<div class="card">
-					<div class="card-header">
-						Default Address
-					</div>
-					<div class="card-block">
-						<h4 class="card-title">Lucas Silva</h4>
-						<p class="card-text">Rua Jaguare, 186</p>
-						<p class="card-text">Bloco 4 - AP 151</p>
-						<p class="card-text">Sao Paulo, SP 05344-030</p>
-						<p class="card-text">Brasil</p>
-						<p class="card-text">Phone: +55 11 982818927</p>
-						<button type="button" class="btn btn-default">Edit</button>
-						<button type="submit" class="btn btn-default">Delete</button>
-					</div>
+			<div class="col-sm-4" *ngIf="i < 2 && last">
+				<div class="card" style="border-style: dashed; height: 100%;">
+					<i class="fas fa-plus fa-2x"></i>
+					<span>Add Address</span>
 				</div>
 			</div>
 		</div>
 		<br>
-		<!-- <a routerLink="/" class="btn-back" *ngIf="last">Back</a> -->
 		<a routerLink="/" class="btn-back">Back</a>
 	</div>
 </div>

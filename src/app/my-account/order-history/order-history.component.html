@@ -12,13 +12,13 @@
 		</div>
 	</div>
 
-	<div class="container-margin-top2" *ngFor="let order of orderList; let last = last">
+	<div class="container-margin-top2" *ngFor="let order of orderList | async; let last = last">
 		<div class="media">
 			<img class="d-flex align-self-center mr-3" [src]="order.image" alt="Generic placeholder image" style="width: 100px; height: 100px;">
 			<div class="media-body">
 				<h5 class="mt-0">{{order.name}}</h5>
 				<p>{{order.description}}</p>
-				<p>purchase date: {{order.date}}</p>
+				<p class="color-green">purchase date: {{order.date | date:'longDate'}}</p>
 			</div>
 		</div>
 		<hr>

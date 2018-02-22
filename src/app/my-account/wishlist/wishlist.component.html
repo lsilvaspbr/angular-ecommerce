@@ -12,13 +12,13 @@
 		</div>
 	</div>
 
-	<div class="container-margin-top2" *ngFor="let product of wishList; let last = last">
+	<div class="container-margin-top2" *ngFor="let product of wishList | async; let last = last">
 		<div class="media">
 			<img class="d-flex align-self-center mr-3" [src]="product.image" alt="Generic placeholder image" style="width: 100px; height: 100px;">
 			<div class="media-body">
 				<h5 class="mt-0">{{product.name}}</h5>
 				<p>{{product.description}}</p>
-				<p>Item added {{product.date}}</p>
+				<p class="color-green">Item added {{product.date | date:'longDate'}}</p>
 			</div>
 		</div>
 		<hr>
