@@ -1,0 +1,87 @@
+<nav class="breadcrumb" style="margin: 0; background-color: #fff;">
+	<a class="breadcrumb-item" routerLink="/">Home</a>
+	<span class="breadcrumb-item active">Sign in</span>
+</nav>
+
+<div class="container">
+	<div class="container-margin-top1">
+		<div class="form-group col-4">
+			<h2>Sign in</h2>			
+		</div>
+	</div>
+
+	<div class="container-margin-top2" style="width: 50%; margin: 0 auto;">
+		<div class="row justify-content-center" *ngIf="(user | async)?.email">
+			<div class="media">
+				<img *ngIf="(user | async)?.photoURL" src="{{ (user | async)?.photoURL }}" alt="{{ (user | async)?.displayName }}" class="d-flex mr-3"
+				 width="60">				
+				<img *ngIf="!(user | async)?.photoURL" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9n-A31tmK0HNa0KsuTv0g1r0d_00_dO4BTt3R3g8pJBpeBNLG"
+				 alt="{{ (user | async)?.displayName }}" class="d-flex mr-3" width="60">
+				<div class="media-body">
+					<h5 class="mt-0">{{ (user | async)?.displayName }}</h5>
+					<p class="mt-0">{{ (user | async)?.email }}</p>
+					<button class="btn btn-info" (click)="facebookSignOut()">Sign out</button>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="row">
+			<button class="btn btn-block btn-secondary" (click)="showEmailSignForm()">Sign in with Email</button>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<button class="btn btn-block btn-secondary" (click)="showEmailRegisterForm()">New Customer? <span class="color-green">Register</span></button>
+		</div>
+
+		<br>
+
+		<!-- Email Sign in Form -->
+		<div class="row" *ngIf="!emailSignFormHide">
+			<div class="form-group">
+				<input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" [(ngModel)]="password" placeholder="Password">
+			</div>
+			<button class="btn btn-block btn-warning" (click)="emailSignIn()">Sign in</button>
+		</div>
+
+		<div *ngIf="!emailRegisterFormHide">
+
+			<h3>Create account</h3>
+			<p *ngIf="returnMsg">{{ returnMsg }}</p>
+
+			<div class="form-group row">
+				<label for="name" class="col-2 col-form-label">Name:</label>
+				<div class="col-10">
+					<input type="text" class="form-control" [(ngModel)]="name" placeholder="Your name" id="name" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="email" class="col-2 col-form-label">E-mail:</label>
+				<div class="col-10">
+					<input type="email" class="form-control" [(ngModel)]="email" placeholder="E-mail" id="email" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="password" class="col-2 col-form-label">Password:</label>
+				<div class="col-10">
+					<input type="password" class="form-control" [(ngModel)]="password" placeholder="Your password" id="password" required>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="imageurl" class="col-2 col-form-label">Password:</label>
+				<div class="col-10">
+					<input type="text" class="form-control" [(ngModel)]="imageURL" placeholder="Insert the image URL" id="imageurl">
+				</div>
+			</div>
+		
+			<button class="btn btn-block btn-primary" (click)="emailRegister()">Register</button>			
+		</div>
+	</div>
+</div>

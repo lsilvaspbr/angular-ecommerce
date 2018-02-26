@@ -10,6 +10,7 @@ import { WishlistComponent } from './my-account/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', component: MyAccountComponent },
+  { path: 'my-account', component: MyAccountComponent },
   { path: 'profile-informations', component: ProfileInformationsComponent },
   { path: 'address-list', component: AddressListComponent },
   { path: 'order-history', component: OrderHistoryComponent },

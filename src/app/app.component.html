@@ -23,11 +23,15 @@
 	<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 		<ul class="navbar-nav justify-content-end">
 			<li class="nav-item">
-				<a class="nav-link" href="#">
+				<a class="nav-link disabled">
+					<i class="fas fa-sign-in-alt fa-lg"></i> Sign in</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" routerLink="/">
 					<i class="fas fa-user-circle fa-lg"></i> My Account</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link disabled" href="#">
+				<a class="nav-link disabled">
 					<i class="fas fa-shopping-cart fa-lg"></i>
 					Cart
 				</a>
@@ -36,9 +40,17 @@
 	</div>
 </nav>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded justify-content-center">
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded justify-content-baseline">
 	<div class="collapse navbar-collapse" id="navbarText">
 		<ul class="navbar-nav">
+			<li class="nav-item" style="margin-right: 60px;">				
+				<div class="my-account-header">
+					<h5>
+						My Account
+						<small style="color: #4C9642;">Hello {{userSigned}}</small>
+					</h5>		
+				</div>
+			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<i class="fas fa-bars"></i>

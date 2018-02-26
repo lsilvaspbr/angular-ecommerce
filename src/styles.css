@@ -2,8 +2,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%;    
 }
 
 .container-margin-top1 {
@@ -35,4 +34,8 @@ a.btn-back {
 
 .color-green {
     color: #4C9642;    
+}
+
+.color-red {
+    color: #a94442;
 }

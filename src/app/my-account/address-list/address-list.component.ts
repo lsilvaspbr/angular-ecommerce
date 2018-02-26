@@ -7,16 +7,14 @@ import { Observable } from 'rxjs/Observable';
   selector: 'app-address-list',
   templateUrl: './address-list.component.html',
   styleUrls: ['./address-list.component.css'],
-  providers: [ AngularFireDatabase ]
+  providers: [AngularFireDatabase]
 })
 export class AddressListComponent implements OnInit {
 
   addressList: Observable<any[]>;
-  addressListRef: AngularFireList<any>;
 
   constructor(db: AngularFireDatabase) {
     this.addressList = db.list('addresslist').valueChanges();
-    this.addressListRef = db.list('addresslist');
   }
 
   ngOnInit() {
