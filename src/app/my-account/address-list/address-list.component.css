@@ -1,0 +1,28 @@
+.card {
+    max-width: 33%;;
+}
+
+.card-add {
+    height: 100%;    
+    border: 2px dashed rgba(0,0,0,.125);        
+    text-align: center;
+}
+
+.card-add:hover {
+    background-color: #F7F7F9;
+}
+.card-add-inside {
+    width: 50%;
+    margin: auto auto;
+}
+
+svg.svg-inline--fa.fa-plus.fa-w-14.fa-4x {
+    color: rgba(0,0,0,.125);        
+    padding-bottom: 10px;
+}
+
+.card-add-inside span {
+    display: block;        
+    color: #292b2c;            
+}
+

@@ -20,12 +20,6 @@ export class OrderHistoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.orderListRef.push({
-    //   name: 'K-Roo Sports',
-    //   description: 'K-Roo Sports Youth Soccer Goals with Soccer Ball and Pump (Set of 2)',
-    //   image: 'assets/kroosports.jpg',
-    //   date: '2018-01-20'
-    // });
   }
 }
 

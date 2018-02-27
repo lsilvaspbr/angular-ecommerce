@@ -39,3 +39,7 @@ a.btn-back {
 .color-red {
     color: #a94442;
 }
+
+a {
+    text-decoration: none !important;
+}
