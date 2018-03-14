@@ -1,6 +1,6 @@
-# CRUD App com Angular 4 e Firebase
+# CRUD App with Angular 4 and Firebase
 
-Building an Angular 4 project with Bootstrap 4 and Firebase.
+Building an Angular 4 project with Bootstrap 4 and Firebase realtime database.
 
 ## Development server
 
