@@ -1,6 +1,6 @@
-# AngularEcommerce
+# CRUD App com Angular 4 e Firebase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+Building an Angular 4 project with Bootstrap 4 and Firebase.
 
 ## Development server
 
