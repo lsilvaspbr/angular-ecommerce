@@ -6,5 +6,5 @@ Angular 4 project with Bootstrap 4 and Firebase realtime database.
 
 Angular 4, Bootstrap 4, Firebase, HTML5, CSS3, Javascript e Typescript.
 
-demo http://lweb.com.br/prj-ecom/
+demo http://lweb.com.br/angular-ecommerce/
 
